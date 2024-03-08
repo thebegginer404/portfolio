@@ -1,0 +1,15 @@
+body{
+    margin:0 auto;
+    background-color: cadetblue;
+    max-width: 800;
+}
+
+h1{
+    margin-top: 20;
+    font-size: 50;
+    font: bold;
+}
+
+p{
+    font-size: 30;
+}
