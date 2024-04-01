@@ -2,16 +2,194 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>git</title>
+    <title>Portfolio</title>
     <link rel="stylesheet" href="git_style.css">
 </head>
 <body>
-    <h1>The begginer</h1>
-    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-         Et exercitationem ipsa accus magnam nihil!
-        illum consequatur aperiam, distinctio voluptates natus blanditiis 
-        amus fuga quo culpa illo! Aut perferendis nemo nobis quae </p>
 
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius, ipsa?</p>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            document.getElementById('sport-link').addEventListener('click', function (event) {
+                smoothScrollTo('sport');
+                event.preventDefault();
+            });
+    
+            document.getElementById('skills-link').addEventListener('click', function (event) {
+                smoothScrollTo('skills');
+                event.preventDefault();
+            });
+    
+            document.getElementById('home-link').addEventListener('click', function (event) {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+                event.preventDefault();
+            });
+    
+            document.getElementById('contact-link').addEventListener('click', function (event) {
+                smoothScrollTo('contact');
+                event.preventDefault();
+            });
+        });
+    
+        function smoothScrollTo(sectionId) {
+            const section = document.getElementById(sectionId);
+            window.scrollTo({
+                top: section.offsetTop,
+                behavior: 'smooth'
+            });
+        }
+    </script>
+    
+    
+
+    <section class="main-home">
+    <section class="main">
+        <nav class="main-nav">
+            <h1 class="logo">Younes <span class="last">Azzouz</span></h1>
+            <div class="main-div">
+                <li><a href="#home" id="home-link" >Home</a></li>
+                <li><a href="#sport" id="sport-link">Sport</a></li>
+                <li><a href="#skills" id="skills-link">Skills</a></li>
+                <li><a href="#contact" id="contact-link">Contact</a></li>
+            </div>
+        </nav>
+    </section>
+    
+    
+
+    <section id="home">
+        <div class="home-div">
+            <h1 class="home-h1">Welcome To Younes Azzouz Portfolio</h1>
+            <h3 class="home-h3">Know more about <span class="Me-span">Me</span></h3>
+            <p>Step into my world and uncover the chapters of my life. <br>
+                Explore defining moments shaping who I am...</p>
+  
+        </div>
+        <div class="img">
+            <img src="man.png" alt="">
+        </div>
+
+        <div class="social">
+            <li><a href="#"><img src="/portfolio/media/youtube.png" alt=""></a></li>
+            <li><a href="#"><img src="/portfolio/media/insta.png" alt=""></a></li>
+            <li><a href="#"><img src="/portfolio/media/facebook.png" alt=""></a></li>
+            <li><a href="#"><img src="/portfolio/media/twitter.png" alt=""></a></li>
+        </div>
+    </section>
+
+    </section>
+
+    <section id="sport">
+        <div class="sport-images">
+            <img src="/portfolio/football/football.png" alt="" class="football">
+            
+        </div>
+        <div class="sport-text">
+            <h1 class="sport-h1">A Passion That Drives Me</h1>
+            <p>Football is more than just a recreational activity for me; it's a strategic pursuit that challenges both my physical 
+                and mental capabilities. Through training sessions and matches, I hone my skills in tactics, coordination, and
+                decision-making. Each game offers an opportunity to analyze opponents, adapt strategies, and work  
+                with teammates towards a common goal. Beyond the thrill of victory, football, instills in me discipline,
+                resilience, and a relentless pursuit of excellence.</p>
+        </div>
+    </section>
+
+    <section class="foot-matchs">
+        <div class="matchs-div">
+            
+            <div class="the-first">
+            <h1>My first match</h1>
+            <img src="/portfolio/football/Foot1.jpeg" alt="">
+            </div>
+
+            <div class="the-second">
+            <h1>My second match</h1>
+            <img src="/portfolio/football/Foot2.jpeg" alt="">
+            </div>
+            
+            <div class="the-third">
+            <h1>My third match</h1>
+            <img src="/portfolio/football/Foot3.jpeg" alt="">
+            </div>
+        </div>
+    </section>
+
+    
+    <section id="skills">
+        <div class="skills-div">
+            <h1 class="skills-h1">My skills</h1>
+            <p>I embarked on my coding journey at the age of 10, exploring the realms of HTML, CSS, and Python.
+                Over the years,these languages have become my trusted companions, 
+                allowing me to create captivating web designs and develop practical solutions.
+                From styling elegant layouts with HTML and CSS to scripting dynamic 
+                functionality with Python, my coding skills have evolved into valuable assets in my journey as a developer.</p>
+        </div>
+        <div class="skills-img">
+            <img src="/portfolio/skills/main.png" alt="">
+        </div>
+    </section>
+    
+    <section id="skills-icons-section">
+        <div class="skills-icons">
+
+            <div class="cards">
+                <div class="html">
+                    <img src="/portfolio/skills/html-5.png" alt="">
+                    <p> I wield HTML to craft the skeleton of websites, molding content into organized structures
+                         with elements like headings and paragraphs.</p>
+                </div>
+            </div>
+            
+            <div class="cards">
+                <div class="css">
+                    <img src="/portfolio/skills/css-3.png" alt="">
+                    <p>CSS is my artistic brush, painting web pages with vibrant colors, 
+                        sleek layouts, and elegant typography to captivate visitors' attention.</p>
+                </div>
+            </div>
+
+            <div class="cards">
+                <div class="python">
+                    <img src="/portfolio/skills/python.png" alt="">
+                    <p>Python is where I'm just starting out. It's like my coding training wheels, 
+                        helping me learn the basics with its simple syntax.</p>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <form action="">
+        <section id="contact">
+            <div class="contact-div">
+                <h1 class="contact-h1">Contact</h1>
+                <div class="inputs">
+                    <div class="First-Name">
+                        <input type="text" required placeholder="Enter Your First Name">
+                    </div>
+                    <div class="Last-Name">
+                        <input type="text" required placeholder="Enter Your Last-Name">
+                    </div>
+                    <div class="Email">
+                        <input type="email" required placeholder="Enter Your Email">
+                    </div>
+                    <div class="Message">
+                        <textarea name="" id="" cols="30" rows="5"></textarea>
+                    </div>
+                    <div class="Submit">
+                        <button class="button">Submit</button>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-img">
+                <img src="contact.png" alt="">
+            </div>
+        </section>
+    </form>
+
 </body>
 </html>
