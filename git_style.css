@@ -415,6 +415,7 @@ nav li a{
 .home-div{
     bottom: 0em;
     margin-top: 190px;
+    height: 40vh;
 }
 
 .social {
@@ -452,12 +453,52 @@ nav li a{
 
 #sport .sport-text{
     width: 100%;
-    padding: 10px;
+    padding: 10px 15px;
 }
 
 .foot-matchs{
     display: none;
 }
 
+.skills-img{
+    display: none;
+}
+
+#skills{
+    height: 7vh;
+}
+
+#skills .skills-div{
+   left: 9%;
+}
+
+.cards{
+    height: 90%;
+    margin: 2px;
+    justify-content: end;
+
+}
+
+.skills-icons p{
+    font-size: 1.1rem;
+    
+}
+
+.hidden{
+    display: none;
+}
+
+#contact{
+    height: 100vh;
+}
+
+.contact-div{
+    padding-bottom: 100%;
+}
+
+
+.contact-img{
+    display: none;
+}
 }
 
