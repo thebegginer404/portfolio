@@ -350,19 +350,22 @@ textarea {
     appearance: none;
     border: none;
     outline: none;
-    background: white;
+    background: var(--default);
+    color: var(--default);
     cursor: pointer;
     user-select: none;
-    color: white;
+    
+    
     
 }
 
 #menu span{
+
     display: block;
     width: 33px;
     height: 4px;
     background-color: #07041a;
-    border-radius: 6px;
+    border-radius: 10px;
     transform-origin: 0 0;
     transition: 0.4s;
     margin-bottom: 5px;
@@ -371,9 +374,7 @@ textarea {
 
 
 @media screen and (max-width:575px) {
-:root{
-    padding: 1.5rem;
-}
+
 
 html{
     font-size: 12px;
@@ -410,6 +411,7 @@ nav li a{
     background-color: #2c373d;
 }
 
+
 .home-div{
     bottom: 0em;
     margin-top: 190px;
@@ -443,5 +445,19 @@ nav li a{
 #menu{
     display: block;
 }
+
+.sport-images{
+    display: none;
+}
+
+#sport .sport-text{
+    width: 100%;
+    padding: 10px;
+}
+
+.foot-matchs{
+    display: none;
+}
+
 }
 
