@@ -4,10 +4,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
     <link rel="stylesheet" href="git_style.css">
+    <link rel="stylesheet" href="script.js">
 </head>
 <body>
 
-<<<<<<< HEAD
     
     <script>
         document.addEventListener("DOMContentLoaded", function () {
@@ -45,22 +45,74 @@
     </script>
     
     
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            document.getElementById('sport-link').addEventListener('click', function (event) {
+                smoothScrollTo('sport');
+                event.preventDefault();
+            });
+    
+            document.getElementById('skills-link').addEventListener('click', function (event) {
+                smoothScrollTo('skills');
+                event.preventDefault();
+            });
+    
+            document.getElementById('home-link').addEventListener('click', function (event) {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+                event.preventDefault();
+            });
+    
+            document.getElementById('contact-link').addEventListener('click', function (event) {
+                smoothScrollTo('contact');
+                event.preventDefault();
+            });
+    
+            // Toggle main-div visibility when menu button is clicked
+            document.getElementById('menu').addEventListener('click', function (event) {
+                var mainDiv = document.getElementById('main-div');
+                if (mainDiv.style.display === "block") {
+                    mainDiv.style.display = "none";
+                } else {
+                    mainDiv.style.display = "block";
+                }
+            });
+        });
+    
+        function smoothScrollTo(sectionId) {
+            const section = document.getElementById(sectionId);
+            window.scrollTo({
+                top: section.offsetTop,
+                behavior: 'smooth'
+            });
+        }
+    </script>
+    
 
     <section class="main-home">
     <section class="main">
         <nav class="main-nav">
             <h1 class="logo">Younes <span class="last">Azzouz</span></h1>
-            <div class="main-div">
+            <div class="main-div" id="main-div">
                 <li><a href="#home" id="home-link" >Home</a></li>
                 <li><a href="#sport" id="sport-link">Sport</a></li>
                 <li><a href="#skills" id="skills-link">Skills</a></li>
                 <li><a href="#contact" id="contact-link">Contact</a></li>
             </div>
+
+            <button id="menu">
+                <span></span>
+                <span></span>
+                <span></span>
+
+            </button>
         </nav>
     </section>
     
     
-
+   
     <section id="home">
         <div class="home-div">
             <h1 class="home-h1">Welcome To Younes Azzouz Portfolio</h1>
@@ -73,15 +125,17 @@
             <img src="man.png" alt="">
         </div>
 
-        <div class="social">
-            <li><a href="#"><img src="/portfolio/media/youtube.png" alt=""></a></li>
-            <li><a href="#"><img src="/portfolio/media/insta.png" alt=""></a></li>
-            <li><a href="#"><img src="/portfolio/media/facebook.png" alt=""></a></li>
-            <li><a href="#"><img src="/portfolio/media/twitter.png" alt=""></a></li>
-        </div>
+        
+    </section>
+    <div class="social">
+        <li><a href="#"><img src="/portfolio/media/youtube.png" alt=""></a></li>
+        <li><a href="#"><img src="/portfolio/media/insta.png" alt=""></a></li>
+        <li><a href="#"><img src="/portfolio/media/facebook.png" alt=""></a></li>
+        <li><a href="#"><img src="/portfolio/media/twitter.png" alt=""></a></li>
+    </div>
     </section>
 
-    </section>
+     <!--
 
     <section id="sport">
         <div class="sport-images">
@@ -191,10 +245,8 @@
             </div>
         </section>
     </form>
+    -->
 
-=======
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius, ipsa?</p>
-        <p> bon continuation</p>
->>>>>>> 10b9defec910774d8e9d334fcffd6332bd2cbc25
+    
 </body>
 </html>

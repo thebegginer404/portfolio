@@ -82,7 +82,7 @@ body, .main-home {
 .home-div {
     display: flex;
     flex-direction: column;
-    height: 50vh; 
+    height: 60vh; 
     color: var(--default);
     margin-left: 40px;
     font-weight: bold;
@@ -306,7 +306,6 @@ body, .main-home {
     max-width: 100%;
     height: auto;
     
-    
 }
 
 .contact-h1 {
@@ -345,5 +344,104 @@ textarea {
     color: var(--default);
 }
 
+#menu{
+    display: none;
+    position: relative;
+    appearance: none;
+    border: none;
+    outline: none;
+    background: white;
+    cursor: pointer;
+    user-select: none;
+    color: white;
+    
+}
 
+#menu span{
+    display: block;
+    width: 33px;
+    height: 4px;
+    background-color: #07041a;
+    border-radius: 6px;
+    transform-origin: 0 0;
+    transition: 0.4s;
+    margin-bottom: 5px;
+    
+}
+
+
+@media screen and (max-width:575px) {
+:root{
+    padding: 1.5rem;
+}
+
+html{
+    font-size: 12px;
+}
+
+nav{
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 82px;
+    padding-top: 0;
+    z-index: 100;
+
+}
+
+nav li a{
+    display: block;
+    text-align: center;
+    margin: 50px;
+}
+
+.img{
+    display: none;
+}
+
+.main-div{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #2c373d;
+}
+
+.home-div{
+    bottom: 0em;
+    margin-top: 190px;
+}
+
+.social {
+    margin-left: 20px;
+    display: flex;
+    justify-content: center; /* Center the social media icons */
+    margin-top: 20px; /* Adjust margin as needed */
+    background-color: transparent; /* Remove background color */
+}
+
+.social li {
+    margin-left: 5px; /* Remove left margin */
+    margin-right: 10px; /* Add some right margin for spacing */
+    margin-bottom: 10px;
+}
+
+.social img {
+    width: 35px;
+    height: 35px;
+    transition: .3s;
+}
+
+.social img:hover {
+    width: 45px;
+    height: 45px;
+}
+
+#menu{
+    display: block;
+}
+}
 
