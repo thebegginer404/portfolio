@@ -11,83 +11,56 @@
     
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-            document.getElementById('sport-link').addEventListener('click', function (event) {
-                smoothScrollTo('sport');
-                event.preventDefault();
-            });
-    
-            document.getElementById('skills-link').addEventListener('click', function (event) {
-                smoothScrollTo('skills');
-                event.preventDefault();
-            });
-    
-            document.getElementById('home-link').addEventListener('click', function (event) {
-                window.scrollTo({
-                    top: 0,
-                    behavior: 'smooth'
-                });
-                event.preventDefault();
-            });
-    
-            document.getElementById('contact-link').addEventListener('click', function (event) {
-                smoothScrollTo('contact');
-                event.preventDefault();
-            });
+    document.getElementById('sport-link').addEventListener('click', function (event) {
+        smoothScrollTo('sport');
+        toggleMenu(); // Close the menu
+        event.preventDefault();
+    });
+
+    document.getElementById('skills-link').addEventListener('click', function (event) {
+        smoothScrollTo('skills');
+        toggleMenu(); // Close the menu
+        event.preventDefault();
+    });
+
+    document.getElementById('home-link').addEventListener('click', function (event) {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
         });
-    
-        function smoothScrollTo(sectionId) {
-            const section = document.getElementById(sectionId);
-            window.scrollTo({
-                top: section.offsetTop,
-                behavior: 'smooth'
-            });
-        }
-    </script>
-    
-    
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            document.getElementById('sport-link').addEventListener('click', function (event) {
-                smoothScrollTo('sport');
-                event.preventDefault();
-            });
-    
-            document.getElementById('skills-link').addEventListener('click', function (event) {
-                smoothScrollTo('skills');
-                event.preventDefault();
-            });
-    
-            document.getElementById('home-link').addEventListener('click', function (event) {
-                window.scrollTo({
-                    top: 0,
-                    behavior: 'smooth'
-                });
-                event.preventDefault();
-            });
-    
-            document.getElementById('contact-link').addEventListener('click', function (event) {
-                smoothScrollTo('contact');
-                event.preventDefault();
-            });
-    
-            // Toggle main-div visibility when menu button is clicked
-            document.getElementById('menu').addEventListener('click', function (event) {
-                var mainDiv = document.getElementById('main-div');
-                if (mainDiv.style.display === "block") {
-                    mainDiv.style.display = "none";
-                } else {
-                    mainDiv.style.display = "block";
-                }
-            });
-        });
-    
-        function smoothScrollTo(sectionId) {
-            const section = document.getElementById(sectionId);
-            window.scrollTo({
-                top: section.offsetTop,
-                behavior: 'smooth'
-            });
-        }
+        toggleMenu(); // Close the menu
+        event.preventDefault();
+    });
+
+    document.getElementById('contact-link').addEventListener('click', function (event) {
+        smoothScrollTo('contact');
+        toggleMenu(); // Close the menu
+        event.preventDefault();
+    });
+
+    // Toggle main-div visibility when menu button is clicked
+    document.getElementById('menu').addEventListener('click', function (event) {
+        toggleMenu();
+    });
+});
+
+function smoothScrollTo(sectionId) {
+    const section = document.getElementById(sectionId);
+    window.scrollTo({
+        top: section.offsetTop,
+        behavior: 'smooth'
+    });
+}
+
+function toggleMenu() {
+    var mainDiv = document.getElementById('main-div');
+    if (mainDiv.style.display === "block") {
+        mainDiv.style.display = "none";
+    } else {
+        mainDiv.style.display = "block";
+    }
+}
+
     </script>
     
 
@@ -141,9 +114,6 @@
      
 
     <section id="sport">
-        <div class="sport-images">
-            <img src="/portfolio/football/football.png" alt="" class="football">
-        </div>
         <div class="sport-text">
             <h1 class="sport-h1">A Passion That Drives Me</h1>
             <p>Football is more than just a recreational activity for me; it's a strategic pursuit that challenges both my physical 
@@ -152,12 +122,15 @@
                 with teammates towards a common goal. Beyond the thrill of victory, football, instills in me discipline,
                 resilience, and a relentless pursuit of excellence.</p>
         </div>
+        <div class="sport-images">
+            <img src="/portfolio/football/football.png" alt="" class="football">
+        </div>
+       
     </section>
 
 
     <section class="foot-matchs">
         <div class="matchs-div">
-            
             <div class="the-first">
             <h1>My first match</h1>
             <img src="/portfolio/football/Foot1.jpeg" alt="">
@@ -227,7 +200,12 @@
     <form action="">
         <section id="contact">
             <div class="contact-div">
-                <h1 class="contact-h1">Contact</h1>
+
+                <div class="contact-icon">
+                    <h1 class="contact-h1">Contact</h1>
+                    <img src="contact-us.png" alt="">
+                
+                </div>
                 <div class="inputs">
                     <div class="First-Name">
                         <input type="text" required placeholder="Enter Your First Name">
@@ -239,7 +217,7 @@
                         <input type="email" required placeholder="Enter Your Email">
                     </div>
                     <div class="Message">
-                        <textarea name="" id="" cols="30" rows="5"></textarea>
+                        <textarea name="" id="" cols="30" rows="5" placeholder="Type Your Message"></textarea>
                     </div>
                     <div class="Submit">
                         <button class="button">Submit</button>

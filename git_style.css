@@ -145,6 +145,8 @@ body, .main-home {
     height: 60px;
 }
 
+
+
 #sport{
     background-color: var(--bg2color);
     padding-left: 0px;
@@ -292,6 +294,10 @@ body, .main-home {
     background-color: var(--bg2color);
 }
 
+.contact-icon img{
+    display: none;
+}
+
 .contact-div {
     flex: 1;
     padding: 5%;
@@ -421,14 +427,14 @@ nav li a{
 .social {
     margin-left: 20px;
     display: flex;
-    justify-content: center; /* Center the social media icons */
-    margin-top: 20px; /* Adjust margin as needed */
-    background-color: transparent; /* Remove background color */
+    justify-content: center; 
+    margin-top: 20px; 
+    background-color: transparent; 
 }
 
 .social li {
-    margin-left: 5px; /* Remove left margin */
-    margin-right: 10px; /* Add some right margin for spacing */
+    margin-left: 5px;
+    margin-right: 10px;
     margin-bottom: 10px;
 }
 
@@ -445,32 +451,70 @@ nav li a{
 
 #menu{
     display: block;
+    margin-right: 2%;
 }
 
-.sport-images{
-    display: none;
-}
+
+
 
 #sport .sport-text{
     width: 100%;
     padding: 10px 15px;
 }
 
-.foot-matchs{
-    display: none;
+#sport {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sport-images {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -2px; /* Adjust margin as needed */
+}
+
+.sport-images img {
+    width: 9000%; /* Adjust the width percentage as needed */
+    max-width: 100%;
+    height: auto;
+}
+
+
+.matchs-div{
+    flex-direction: column;
+    
+}
+
+
+.matchs-div div{
+    width: 400px;
+}
+
+.matchs-div img{
+    width: 300px;
+    height: 200px;
+    margin-bottom: 10px; 
+    
+}
+
+
+
+#skills{
+    height: 10vh;
 }
 
 .skills-img{
     display: none;
 }
 
-#skills{
-    height: 7vh;
-}
-
 #skills .skills-div{
    left: 9%;
 }
+
+
 
 .cards{
     height: 90%;
@@ -488,17 +532,50 @@ nav li a{
     display: none;
 }
 
+
+
 #contact{
     height: 100vh;
+}
+
+.contact-icon{
+    display: block;
+    display: flex;
+    
+}
+
+.contact-icon img{
+    margin-left: 20%;
+    display: block;
+}
+
+.contact-icon img{
+    width: 48px;
+    height: auto;
+    transition: 0.3s;
+    
+}
+
+.contact-icon img:hover{
+    text-decoration: underline;
+    width: 56px;
+    height: auto;
 }
 
 .contact-div{
     padding-bottom: 100%;
 }
 
+.contact-div input , textarea{
+    width: 150%;
+} 
 
-.contact-img{
+.contact-img img{
     display: none;
+   
 }
+
+
+
 }
 
